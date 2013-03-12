@@ -1,0 +1,15 @@
+{
+    "contents" : "export(getCharEncoding)\nuseDynLib(Ruchardet)\n",
+    "created" : 1362735846281.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3998394908",
+    "id" : "F4D0ACB1",
+    "lastKnownWriteTime" : 1362735866,
+    "path" : "~/work/Ruchardet/NAMESPACE",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_namespace"
+}

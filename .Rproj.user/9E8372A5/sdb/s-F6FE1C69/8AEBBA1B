@@ -1,0 +1,15 @@
+{
+    "contents" : "\n\n#' getCharEncoding\n#' \n#' getCharEncoding\n#' \n#' @param chars input charactoer \n#' @return output encodings\n#' @useDynLib Ruchardet\n#' @export\ngetCharEncoding <- function(chars) {\n    .Call('getCharEncoding', chars,PACKAGE = 'Ruchardet')\n}\n\n",
+    "created" : 1362734895040.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1120161442",
+    "id" : "8AEBBA1B",
+    "lastKnownWriteTime" : 1362753461,
+    "path" : "~/work/Ruchardet/R/getCharEncoding.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
