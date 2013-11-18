@@ -3,8 +3,7 @@
 #include "uchardet/uchardet.h"
 
 
-RcppExport SEXP newRcppStringVectorExample(SEXP chars){
-BEGIN_RCPP
+extern "C"  SEXP getCharEncoding(SEXP chars){
 //Rcpp::CharacterVector getCharEncoding(Rcpp::CharacterVector chars){
   Rcpp::StringVector charssv(chars);
   int inputsize = charssv.size();
@@ -17,14 +16,14 @@ BEGIN_RCPP
   for(int i = 0; i< inputsize; i++){  
     uchardet_handle_data(encoding_detector, charssv[i], strlen(charssv[i]));  
     uchardet_data_end(encoding_detector);
-    ouputs[i] = uchardet_get_charset(encoding_detector);
+    ouputs[i]  = uchardet_get_charset(encoding_detector);
+    std::cout  << ouputs[i];
     uchardet_reset(encoding_detector);
   }
   
   uchardet_delete(encoding_detector);
   
   return ouputs;
-END_RCPP
 } 
 
 

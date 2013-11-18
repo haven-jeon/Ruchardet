@@ -1,3 +1,4 @@
+## This assumes that the LIB_GSL variable points to working GSL libraries
+PKG_CPPFLAGS=-I$(LIB_UCHAR)/include 
+PKG_LIBS=-L$(LIB_UCAHR)/lib -lgsl -luchardet $(shell "${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" -e "Rcpp:::LdFlags()")
 
-## Use the R_HOME indirection to support installations of multiple R version
-PKG_LIBS = $(shell "${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" -e "Rcpp:::LdFlags()")

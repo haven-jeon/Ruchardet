@@ -1,0 +1,10 @@
+
+# set by configure
+CFLAGS = @CFLAGS@
+LIBS   = @LIBS@
+RCPP_LDFLAGS = @RCPP_LDFLAGS@
+
+# combine with standard arguments for R
+PKG_CPPFLAGS = $(CFLAGS) 
+PKG_LIBS += -luchardet $(RCPP_LDFLAGS)
+
