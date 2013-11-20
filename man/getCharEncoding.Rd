@@ -1,16 +1,16 @@
 \name{getCharEncoding}
 \alias{getCharEncoding}
-\title{getCharEncoding}
+\title{get encoding information of input string}
 \usage{
-  getCharEncoding(chars)
+  getCharEncoding(str)
 }
 \arguments{
-  \item{chars}{input charactoer}
+  \item{str}{input string}
 }
 \value{
-  output encodings
+  string of encoding
 }
 \description{
-  getCharEncoding
+  get encoding information of input string
 }
 
