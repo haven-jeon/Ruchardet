@@ -1,2 +1,4 @@
-PKG_LIBS=-luchardet $(shell "${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" -e "Rcpp:::LdFlags()")
+## This assumes that the LIB_UCHARDET variable points to working uchardet library
+PKG_CPPFLAGS=-I$(LIB_UCHARDET)/include  
+PKG_LIBS=$(LIB_UCHARDET)/lib -luchardet $(shell "${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" -e "Rcpp:::LdFlags()")
 
