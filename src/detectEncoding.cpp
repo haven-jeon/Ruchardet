@@ -7,11 +7,12 @@ using namespace Rcpp;
 
 
 
-//' get encoding information of input string 
+//' detect encoding of input string
 //' @param str input string
 //' @return string of encoding 
+//' @references \url{https://code.google.com/p/uchardet/}
 // [[Rcpp::export]]
-CharacterVector getCharEncoding(StringVector str){
+CharacterVector detectEncoding(StringVector str){
   int inputsize = str.size();
 
   uchardet_t encoding_detector = uchardet_new();

@@ -622,8 +622,6 @@ ac_subst_vars='LTLIBOBJS
 LIBOBJS
 RCPP_LDFLAGS
 RCPP_CXXFLAGS
-UCHAR_LIBS
-UCHAR_CFLAGS
 RSCRIPT
 EGREP
 GREP
@@ -3256,7 +3254,6 @@ fi
 
 
 
-CFLAGS="$CFLAGS -I/usr/local/include"
 LIBS="$LIBS -luchardet"
 
 
@@ -3315,7 +3312,6 @@ else
 fi
 
 # Now substitute these variables in src/Makevars.in to create src/Makevars
-
 
 
 

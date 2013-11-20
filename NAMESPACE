@@ -1,2 +1,2 @@
 useDynLib(Ruchardet)
-export(getCharEncoding)
+export(detectEncoding)

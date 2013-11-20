@@ -15,14 +15,12 @@ install_github('Ruchardet', 'haven-jeon')
 ### Example
 
 ```r
-R > library(Ruchardet)
-Loading required package: Rcpp
-R > getCharEncoding('전희원입니다')
+R >  nm <- '전희원입니다'
+R > benc <- detectEncoding(nm)
+R > benc
 [1] "UTF-8"
-R > iconv('전희원입니다. ', 'UTF-8', 'CP949')
-[1] "\xc0\xfc\xc8\xf1\xbf\xf8\xc0Դϴ\xd9. "
-R > ch <- iconv('전희원입니다. ', 'UTF-8', 'CP949')
-R > getCharEncoding(ch)
-[1] "EUC-KR"
+R > nme <- iconv(nm, benc, "CP949")
+R > detectEncoding(c(nm, nme))
+[1] "UTF-8"  "EUC-KR"
 ```
 

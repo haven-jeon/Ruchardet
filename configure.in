@@ -9,7 +9,6 @@ AC_PROG_CC
 AC_CHECK_LIB([uchardet], [encoding_detector])
 AC_CHECK_HEADER([uchardet/uchardet.h])
 
-#CFLAGS="$CFLAGS -I/usr/local/include"
 LIBS="$LIBS -luchardet"
 
 
@@ -32,7 +31,6 @@ else
 fi
 
 # Now substitute these variables in src/Makevars.in to create src/Makevars
-#AC_SUBST(CFLAGS)
 AC_SUBST(LIBS)
 AC_SUBST(RCPP_CXXFLAGS)
 AC_SUBST(RCPP_LDFLAGS)

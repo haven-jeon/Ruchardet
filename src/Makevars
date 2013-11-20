@@ -1,10 +1,8 @@
 
 # set by configure
-CFLAGS = -g -O2 -I/usr/local/include
 LIBS   =  -luchardet
-RCPP_LDFLAGS = -L/home/gogamza/R/x86_64-unknown-linux-gnu-library/3.0/Rcpp/lib -lRcpp -Wl,-rpath,/home/gogamza/R/x86_64-unknown-linux-gnu-library/3.0/Rcpp/lib
+RCPP_LDFLAGS = -L/home/gogamza/R/x86_64-pc-linux-gnu-library/3.0/Rcpp/lib -lRcpp -Wl,-rpath,/home/gogamza/R/x86_64-pc-linux-gnu-library/3.0/Rcpp/lib
 
 # combine with standard arguments for R
-PKG_CPPFLAGS = $(CFLAGS) 
 PKG_LIBS += -luchardet $(RCPP_LDFLAGS)
 

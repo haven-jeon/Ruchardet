@@ -622,8 +622,6 @@ ac_subst_vars='LTLIBOBJS
 LIB@&t@OBJS
 RCPP_LDFLAGS
 RCPP_CXXFLAGS
-UCHAR_LIBS
-UCHAR_CFLAGS
 RSCRIPT
 EGREP
 GREP
@@ -3256,7 +3254,6 @@ fi
 
 
 
-CFLAGS="$CFLAGS -I/usr/local/include"
 LIBS="$LIBS -luchardet"
 
 
@@ -3309,13 +3306,12 @@ if test x"${RSCRIPT}" == x"yes" ; then
      ## Rcpp compile flag providing header directory containing Rcpp.h
      RCPP_CXXFLAGS=`${R_HOME}/bin/Rscript -e 'Rcpp:::CxxFlags()'`
      ## link flag providing libary as well as path to library, and optionally rpath
-     RCPP_LDFLAGS=`${R_HOME}/bin/Rscript -e 'Rcpp:::LdFlags()'`
+     RCPP_LDFLAGS=`${R_HOME}/bin/Rscript -e 'Rcpp:::LdFlags()'` 
 else
     as_fn_error $? "Rscript not found, is R installed?" "$LINENO" 5
 fi
 
 # Now substitute these variables in src/Makevars.in to create src/Makevars
-
 
 
 

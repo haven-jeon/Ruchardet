@@ -5,15 +5,15 @@
 
 using namespace Rcpp;
 
-// getCharEncoding
-CharacterVector getCharEncoding(StringVector str);
-RcppExport SEXP Ruchardet_getCharEncoding(SEXP strSEXP) {
+// detectEncoding
+CharacterVector detectEncoding(StringVector str);
+RcppExport SEXP Ruchardet_detectEncoding(SEXP strSEXP) {
 BEGIN_RCPP
     SEXP __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
         Rcpp::traits::input_parameter< StringVector >::type str(strSEXP );
-        CharacterVector __result = getCharEncoding(str);
+        CharacterVector __result = detectEncoding(str);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
     UNPROTECT(1);

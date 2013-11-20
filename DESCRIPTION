@@ -1,14 +1,15 @@
 Package: Ruchardet
 Type: Package
 Title: Ruchardet
-Version: 0.1
+Version: 0.0-1
 Date: 2013-03-08
 Author: Heewon Jeon
 Maintainer: Heewon Jeon <madjakarta@gmail.com>
 Description: R package to detect character encoding
 License: MPL
+URL: https://github.com/haven-jeon/Ruchardet/
 Depends:
-    Rcpp (>= 0.10.2)
+    Rcpp (>= 0.10.6)
 LinkingTo: Rcpp
 Collate:
     'RcppExports.R'
