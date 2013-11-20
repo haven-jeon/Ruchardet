@@ -4,6 +4,7 @@
 #' get encoding information of input string 
 #' @param str input string
 #' @return string of encoding 
+#' @export
 getCharEncoding <- function(str) {
     .Call('Ruchardet_getCharEncoding', PACKAGE = 'Ruchardet', str)
 }
