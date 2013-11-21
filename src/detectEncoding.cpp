@@ -1,6 +1,6 @@
 #include <Rcpp.h>
 #include <string.h>
-#include <uchardet/uchardet.h>
+#include "uchardet.h"
 
 using namespace Rcpp;
 
