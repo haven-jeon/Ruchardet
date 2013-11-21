@@ -1,6 +1,6 @@
 
 # The version set here will propagate to other files from here
-AC_INIT([Ruchardet], 0.1.0)
+AC_INIT([Ruchardet], 0.0-1)
 
 # Checks for common programs using default macros
 AC_PROG_CC
@@ -9,7 +9,15 @@ AC_PROG_CC
 AC_CHECK_LIB([uchardet], [encoding_detector])
 AC_CHECK_HEADER([uchardet/uchardet.h])
 
-LIBS="$LIBS -luchardet"
+AC_PATH_PROG([PKG_CONFIG], [pkg-config])
+
+if test "${PKG_CONFIG}" != ""; then
+  UCD_CFLAGS=`${PKG_CONFIG} --cflags uchardet`
+  UCD_LIBS=`${PKG_CONFIG} --libs uchardet`
+else
+  AC_MSG_ERROR([pkg-config not found, is uchardet installed?])
+fi
+
 
 
 ## Use Rscript to query Rcpp for compiler and linker flags
@@ -31,7 +39,8 @@ else
 fi
 
 # Now substitute these variables in src/Makevars.in to create src/Makevars
-AC_SUBST(LIBS)
+AC_SUBST(UCD_CFLAGS)
+AC_SUBST(UCD_LIBS)
 AC_SUBST(RCPP_CXXFLAGS)
 AC_SUBST(RCPP_LDFLAGS)
 

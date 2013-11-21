@@ -1,8 +1,10 @@
 
 # set by configure
-LIBS   = @LIBS@
+UCD_CFLAGS   = @UCD_CFLAGS@
+UCD_LIBS     = @UCD_LIBS@
 RCPP_LDFLAGS = @RCPP_LDFLAGS@
 
 # combine with standard arguments for R
-PKG_LIBS += -luchardet $(RCPP_LDFLAGS)
+PKG_CPPFLAGS += $(UCD_CFLAGS) 
+PKG_LIBS += $(UCD_LIBS) $(RCPP_LDFLAGS)
 
