@@ -45,18 +45,18 @@ PATH: /usr/lib/jvm/java-1.7.0-openjdk-amd64/jre/bin
 ## Core tests. ##
 ## ----------- ##
 
-configure:2067: checking for gcc
-configure:2083: found /usr/bin/gcc
-configure:2094: result: gcc
-configure:2323: checking for C compiler version
-configure:2332: gcc --version >&5
+configure:1783: checking for gcc
+configure:1799: found /usr/bin/gcc
+configure:1810: result: gcc
+configure:2039: checking for C compiler version
+configure:2048: gcc --version >&5
 gcc (Ubuntu/Linaro 4.7.3-1ubuntu1) 4.7.3
 Copyright (C) 2012 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-configure:2343: $? = 0
-configure:2332: gcc -v >&5
+configure:2059: $? = 0
+configure:2048: gcc -v >&5
 Using built-in specs.
 COLLECT_GCC=gcc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.7/lto-wrapper
@@ -64,179 +64,56 @@ Target: x86_64-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 4.7.3-1ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-4.7/README.Bugs --enable-languages=c,c++,go,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.7 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.7 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --enable-plugin --with-system-zlib --enable-objc-gc --with-cloog --enable-cloog-backend=ppl --disable-cloog-version-check --disable-ppl-version-check --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
 gcc version 4.7.3 (Ubuntu/Linaro 4.7.3-1ubuntu1) 
-configure:2343: $? = 0
-configure:2332: gcc -V >&5
+configure:2059: $? = 0
+configure:2048: gcc -V >&5
 gcc: error: unrecognized command line option '-V'
 gcc: fatal error: no input files
 compilation terminated.
-configure:2343: $? = 4
-configure:2332: gcc -qversion >&5
+configure:2059: $? = 4
+configure:2048: gcc -qversion >&5
 gcc: error: unrecognized command line option '-qversion'
 gcc: fatal error: no input files
 compilation terminated.
-configure:2343: $? = 4
-configure:2363: checking whether the C compiler works
-configure:2385: gcc    conftest.c  >&5
-configure:2389: $? = 0
-configure:2437: result: yes
-configure:2440: checking for C compiler default output file name
-configure:2442: result: a.out
-configure:2448: checking for suffix of executables
-configure:2455: gcc -o conftest    conftest.c  >&5
-configure:2459: $? = 0
-configure:2481: result: 
-configure:2503: checking whether we are cross compiling
-configure:2511: gcc -o conftest    conftest.c  >&5
-configure:2515: $? = 0
-configure:2522: ./conftest
-configure:2526: $? = 0
-configure:2541: result: no
-configure:2546: checking for suffix of object files
-configure:2568: gcc -c   conftest.c >&5
-configure:2572: $? = 0
-configure:2593: result: o
-configure:2597: checking whether we are using the GNU C compiler
-configure:2616: gcc -c   conftest.c >&5
-configure:2616: $? = 0
-configure:2625: result: yes
-configure:2634: checking whether gcc accepts -g
-configure:2654: gcc -c -g  conftest.c >&5
-configure:2654: $? = 0
-configure:2695: result: yes
-configure:2712: checking for gcc option to accept ISO C89
-configure:2775: gcc  -c -g -O2  conftest.c >&5
-configure:2775: $? = 0
-configure:2788: result: none needed
-configure:2811: checking for encoding_detector in -luchardet
-configure:2836: gcc -o conftest -g -O2   conftest.c -luchardet   >&5
-/tmp/ccFL7k7y.o: In function `main':
-/home/gogamza/work/Ruchardet/conftest.c:20: undefined reference to `encoding_detector'
-collect2: error: ld returned 1 exit status
-configure:2836: $? = 1
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "Ruchardet"
-| #define PACKAGE_TARNAME "ruchardet"
-| #define PACKAGE_VERSION "0.0-1"
-| #define PACKAGE_STRING "Ruchardet 0.0-1"
-| #define PACKAGE_BUGREPORT ""
-| #define PACKAGE_URL ""
-| /* end confdefs.h.  */
-| 
-| /* Override any GCC internal prototype to avoid an error.
-|    Use char because int might match the return type of a GCC
-|    builtin and then its argument prototype would still apply.  */
-| #ifdef __cplusplus
-| extern "C"
-| #endif
-| char encoding_detector ();
-| int
-| main ()
-| {
-| return encoding_detector ();
-|   ;
-|   return 0;
-| }
-configure:2845: result: no
-configure:2861: checking how to run the C preprocessor
-configure:2892: gcc -E  conftest.c
-configure:2892: $? = 0
-configure:2906: gcc -E  conftest.c
-conftest.c:9:28: fatal error: ac_nonexistent.h: No such file or directory
-compilation terminated.
-configure:2906: $? = 1
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "Ruchardet"
-| #define PACKAGE_TARNAME "ruchardet"
-| #define PACKAGE_VERSION "0.0-1"
-| #define PACKAGE_STRING "Ruchardet 0.0-1"
-| #define PACKAGE_BUGREPORT ""
-| #define PACKAGE_URL ""
-| /* end confdefs.h.  */
-| #include <ac_nonexistent.h>
-configure:2931: result: gcc -E
-configure:2951: gcc -E  conftest.c
-configure:2951: $? = 0
-configure:2965: gcc -E  conftest.c
-conftest.c:9:28: fatal error: ac_nonexistent.h: No such file or directory
-compilation terminated.
-configure:2965: $? = 1
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "Ruchardet"
-| #define PACKAGE_TARNAME "ruchardet"
-| #define PACKAGE_VERSION "0.0-1"
-| #define PACKAGE_STRING "Ruchardet 0.0-1"
-| #define PACKAGE_BUGREPORT ""
-| #define PACKAGE_URL ""
-| /* end confdefs.h.  */
-| #include <ac_nonexistent.h>
-configure:2994: checking for grep that handles long lines and -e
-configure:3052: result: /bin/grep
-configure:3057: checking for egrep
-configure:3119: result: /bin/grep -E
-configure:3124: checking for ANSI C header files
-configure:3144: gcc -c -g -O2  conftest.c >&5
-configure:3144: $? = 0
-configure:3217: gcc -o conftest -g -O2   conftest.c  >&5
-configure:3217: $? = 0
-configure:3217: ./conftest
-configure:3217: $? = 0
-configure:3228: result: yes
-configure:3241: checking for sys/types.h
-configure:3241: gcc -c -g -O2  conftest.c >&5
-configure:3241: $? = 0
-configure:3241: result: yes
-configure:3241: checking for sys/stat.h
-configure:3241: gcc -c -g -O2  conftest.c >&5
-configure:3241: $? = 0
-configure:3241: result: yes
-configure:3241: checking for stdlib.h
-configure:3241: gcc -c -g -O2  conftest.c >&5
-configure:3241: $? = 0
-configure:3241: result: yes
-configure:3241: checking for string.h
-configure:3241: gcc -c -g -O2  conftest.c >&5
-configure:3241: $? = 0
-configure:3241: result: yes
-configure:3241: checking for memory.h
-configure:3241: gcc -c -g -O2  conftest.c >&5
-configure:3241: $? = 0
-configure:3241: result: yes
-configure:3241: checking for strings.h
-configure:3241: gcc -c -g -O2  conftest.c >&5
-configure:3241: $? = 0
-configure:3241: result: yes
-configure:3241: checking for inttypes.h
-configure:3241: gcc -c -g -O2  conftest.c >&5
-configure:3241: $? = 0
-configure:3241: result: yes
-configure:3241: checking for stdint.h
-configure:3241: gcc -c -g -O2  conftest.c >&5
-configure:3241: $? = 0
-configure:3241: result: yes
-configure:3241: checking for unistd.h
-configure:3241: gcc -c -g -O2  conftest.c >&5
-configure:3241: $? = 0
-configure:3241: result: yes
-configure:3253: checking uchardet/uchardet.h usability
-configure:3253: gcc -c -g -O2  conftest.c >&5
-configure:3253: $? = 0
-configure:3253: result: yes
-configure:3253: checking uchardet/uchardet.h presence
-configure:3253: gcc -E  conftest.c
-configure:3253: $? = 0
-configure:3253: result: yes
-configure:3253: checking for uchardet/uchardet.h
-configure:3253: result: yes
-configure:3262: checking for pkg-config
-configure:3280: found /usr/bin/pkg-config
-configure:3292: result: /usr/bin/pkg-config
-configure:3316: checking for Rscript
-configure:3332: found /usr/bin/Rscript
-configure:3343: result: yes
-configure:3522: creating ./config.status
+configure:2059: $? = 4
+configure:2079: checking whether the C compiler works
+configure:2101: gcc    conftest.c  >&5
+configure:2105: $? = 0
+configure:2153: result: yes
+configure:2156: checking for C compiler default output file name
+configure:2158: result: a.out
+configure:2164: checking for suffix of executables
+configure:2171: gcc -o conftest    conftest.c  >&5
+configure:2175: $? = 0
+configure:2197: result: 
+configure:2219: checking whether we are cross compiling
+configure:2227: gcc -o conftest    conftest.c  >&5
+configure:2231: $? = 0
+configure:2238: ./conftest
+configure:2242: $? = 0
+configure:2257: result: no
+configure:2262: checking for suffix of object files
+configure:2284: gcc -c   conftest.c >&5
+configure:2288: $? = 0
+configure:2309: result: o
+configure:2313: checking whether we are using the GNU C compiler
+configure:2332: gcc -c   conftest.c >&5
+configure:2332: $? = 0
+configure:2341: result: yes
+configure:2350: checking whether gcc accepts -g
+configure:2370: gcc -c -g  conftest.c >&5
+configure:2370: $? = 0
+configure:2411: result: yes
+configure:2428: checking for gcc option to accept ISO C89
+configure:2491: gcc  -c -g -O2  conftest.c >&5
+configure:2491: $? = 0
+configure:2504: result: none needed
+configure:2540: checking for cmake
+configure:2558: found /usr/bin/cmake
+configure:2570: result: /usr/bin/cmake
+configure:2595: checking for Rscript
+configure:2611: found /usr/bin/Rscript
+configure:2622: result: yes
+configure:2803: creating ./config.status
 
 ## ---------------------- ##
 ## Running config.status. ##
@@ -253,7 +130,7 @@ generated by GNU Autoconf 2.69.  Invocation command line was
 
 on gogamza-server
 
-config.status:729: creating src/Makevars
+config.status:726: creating src/Makevars
 
 ## ---------------- ##
 ## Cache variables. ##
@@ -266,8 +143,6 @@ ac_cv_env_CFLAGS_set=
 ac_cv_env_CFLAGS_value=
 ac_cv_env_CPPFLAGS_set=
 ac_cv_env_CPPFLAGS_value=
-ac_cv_env_CPP_set=
-ac_cv_env_CPP_value=
 ac_cv_env_LDFLAGS_set=
 ac_cv_env_LDFLAGS_value=
 ac_cv_env_LIBS_set=
@@ -278,23 +153,8 @@ ac_cv_env_host_alias_set=
 ac_cv_env_host_alias_value=
 ac_cv_env_target_alias_set=
 ac_cv_env_target_alias_value=
-ac_cv_header_inttypes_h=yes
-ac_cv_header_memory_h=yes
-ac_cv_header_stdc=yes
-ac_cv_header_stdint_h=yes
-ac_cv_header_stdlib_h=yes
-ac_cv_header_string_h=yes
-ac_cv_header_strings_h=yes
-ac_cv_header_sys_stat_h=yes
-ac_cv_header_sys_types_h=yes
-ac_cv_header_uchardet_uchardet_h=yes
-ac_cv_header_unistd_h=yes
-ac_cv_lib_uchardet_encoding_detector=no
 ac_cv_objext=o
-ac_cv_path_EGREP='/bin/grep -E'
-ac_cv_path_GREP=/bin/grep
-ac_cv_path_PKG_CONFIG=/usr/bin/pkg-config
-ac_cv_prog_CPP='gcc -E'
+ac_cv_path_CMAKE=/usr/bin/cmake
 ac_cv_prog_RSCRIPT=yes
 ac_cv_prog_ac_ct_CC=gcc
 ac_cv_prog_cc_c89=
@@ -306,15 +166,13 @@ ac_cv_prog_cc_g=yes
 
 CC='gcc'
 CFLAGS='-g -O2'
-CPP='gcc -E'
+CMAKE='/usr/bin/cmake'
 CPPFLAGS=''
-DEFS='-DPACKAGE_NAME=\"Ruchardet\" -DPACKAGE_TARNAME=\"ruchardet\" -DPACKAGE_VERSION=\"0.0-1\" -DPACKAGE_STRING=\"Ruchardet\ 0.0-1\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1'
+DEFS='-DPACKAGE_NAME=\"Ruchardet\" -DPACKAGE_TARNAME=\"ruchardet\" -DPACKAGE_VERSION=\"0.0-1\" -DPACKAGE_STRING=\"Ruchardet\ 0.0-1\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\"'
 ECHO_C=''
 ECHO_N='-n'
 ECHO_T=''
-EGREP='/bin/grep -E'
 EXEEXT=''
-GREP='/bin/grep'
 LDFLAGS=''
 LIBOBJS=''
 LIBS=''
@@ -327,13 +185,13 @@ PACKAGE_TARNAME='ruchardet'
 PACKAGE_URL=''
 PACKAGE_VERSION='0.0-1'
 PATH_SEPARATOR=':'
-PKG_CONFIG='/usr/bin/pkg-config'
 RCPP_CXXFLAGS='-I/home/gogamza/R/x86_64-pc-linux-gnu-library/3.0/Rcpp/include'
 RCPP_LDFLAGS='-L/home/gogamza/R/x86_64-pc-linux-gnu-library/3.0/Rcpp/lib -lRcpp -Wl,-rpath,/home/gogamza/R/x86_64-pc-linux-gnu-library/3.0/Rcpp/lib'
 RSCRIPT='yes'
 SHELL='/bin/bash'
-UCD_CFLAGS='-I/usr/include/uchardet  '
-UCD_LIBS='-luchardet  '
+UCD_A='libuchardet.a'
+UCD_CFLAGS='-Iuchardet-0.0.1/src'
+UCD_LIBS='-Luchardet-0.0.1/src -luchardet'
 ac_ct_CC='gcc'
 bindir='${exec_prefix}/bin'
 build_alias=''
@@ -372,15 +230,5 @@ target_alias=''
 #define PACKAGE_STRING "Ruchardet 0.0-1"
 #define PACKAGE_BUGREPORT ""
 #define PACKAGE_URL ""
-#define STDC_HEADERS 1
-#define HAVE_SYS_TYPES_H 1
-#define HAVE_SYS_STAT_H 1
-#define HAVE_STDLIB_H 1
-#define HAVE_STRING_H 1
-#define HAVE_MEMORY_H 1
-#define HAVE_STRINGS_H 1
-#define HAVE_INTTYPES_H 1
-#define HAVE_STDINT_H 1
-#define HAVE_UNISTD_H 1
 
 configure: exit 0

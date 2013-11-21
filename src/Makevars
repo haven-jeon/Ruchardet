@@ -1,10 +1,18 @@
 
 # set by configure
-UCD_CFLAGS   = -I/usr/include/uchardet  
-UCD_LIBS     = -luchardet  
+UCD_CFLAGS   = -Iuchardet-0.0.1/src
+UCD_LIBS     = -Luchardet-0.0.1/src -luchardet
 RCPP_LDFLAGS = -L/home/gogamza/R/x86_64-pc-linux-gnu-library/3.0/Rcpp/lib -lRcpp -Wl,-rpath,/home/gogamza/R/x86_64-pc-linux-gnu-library/3.0/Rcpp/lib
+UCD_A        = libuchardet.a
+CMAKE        = /usr/bin/cmake
 
 # combine with standard arguments for R
 PKG_CPPFLAGS += $(UCD_CFLAGS) 
 PKG_LIBS += $(UCD_LIBS) $(RCPP_LDFLAGS)
 
+$(SHLIB): $(UCD_A)
+
+$(UCD_A):
+	(cd uchardet-0.0.1 && \
+	$(CMAKE) -DCMAKE_BUILD_TYPE=Release && \
+	($(MAKE) libuchardet_static CC="$(CC)" CFLAGS="$(CFLAGS) $(CPICFLAGS) -DNOSHORTS " LDFLAGS="-fPIC $(LDFLAGS)" AR="$(AR)" RANLIB="$(RANLIB)")  && touch $@)
