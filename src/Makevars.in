@@ -4,7 +4,6 @@ UCD_CFLAGS   = @UCD_CFLAGS@
 UCD_LIBS     = @UCD_LIBS@
 RCPP_LDFLAGS = @RCPP_LDFLAGS@
 UCD_A        = @UCD_A@
-CMAKE        = @CMAKE@
 
 # combine with standard arguments for R
 PKG_CPPFLAGS += $(UCD_CFLAGS) 
@@ -13,6 +12,5 @@ PKG_LIBS += $(UCD_LIBS) $(RCPP_LDFLAGS)
 $(SHLIB): $(UCD_A)
 
 $(UCD_A):
-	(cd uchardet-0.0.1 && \
-	$(CMAKE) -DCMAKE_BUILD_TYPE=Release && \
-	($(MAKE) libuchardet_static CC="$(CC)" CFLAGS="$(CFLAGS) $(CPICFLAGS) -DNOSHORTS " LDFLAGS="-fPIC $(LDFLAGS)" AR="$(AR)" RANLIB="$(RANLIB)")  && touch $@)
+	(cd uchardet-0.0.1/src && \
+	($(MAKE)  CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS) -fPIC " AR="$(AR)" RANLIB="$(RANLIB)"))

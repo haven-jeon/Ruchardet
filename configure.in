@@ -18,12 +18,6 @@ AC_PROG_CC
 #else
 #AC_MSG_WARN([pkg-config not found, is uchardet installed?])
 
-AC_PATH_PROG([CMAKE], [cmake])
-
-if test "${CMAKE}" == ""; then
-  AC_MSG_ERROR([need to install cmake!])
-fi
-
 UCD_CFLAGS='-Iuchardet-0.0.1/src'
 UCD_LIBS='-Luchardet-0.0.1/src -luchardet'
 UCD_A='libuchardet.a'
@@ -49,7 +43,6 @@ else
 fi
 
 # Now substitute these variables in src/Makevars.in to create src/Makevars
-AC_SUBST(CMAKE)
 AC_SUBST(UCD_A)
 AC_SUBST(UCD_CFLAGS)
 AC_SUBST(UCD_LIBS)
