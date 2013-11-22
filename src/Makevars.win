@@ -1,4 +1,12 @@
 ## This assumes that the LIB_UCHARDET variable points to working uchardet library
-PKG_CPPFLAGS=-I$(LIB_UCHARDET)/include  
-PKG_LIBS=$(LIB_UCHARDET)/lib -luchardet $(shell "${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" -e "Rcpp:::LdFlags()")
+PKG_CPPFLAGS += -Iuchardet-0.0.1/src
+PKG_LIBS += -Luchardet-0.0.1/src -luchardet $(shell "${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" -e "Rcpp:::LdFlags()")
 
+
+
+$(SHLIB): libuchardet.a
+
+libuchardet.a:
+	(cd uchardet-0.0.1 && \
+  cmake -DCMAKE_BUILD_TYPE=Release && \
+  ($(MAKE) libuchardet_static CC="$(CC)" CFLAGS="$(CFLAGS) $(CPICFLAGS) -DNOSHORTS " LDFLAGS="-fPIC $(LDFLAGS)" AR="$(AR)" RANLIB="$(RANLIB)")  && touch $@)
