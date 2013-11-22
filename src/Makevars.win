@@ -7,5 +7,5 @@ $(SHLIB): libuchardet.a
 
 libuchardet.a:
 	(cd uchardet-0.0.1/src && \
-	($(MAKE)  CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS) -DNOSHORTS  -fPIC " AR="$(AR)" RANLIB="$(RANLIB)"))
+	($(MAKE)  CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS) $(CXXPICFLAGS)" AR="$(AR)" RANLIB="$(RANLIB)"))
           
