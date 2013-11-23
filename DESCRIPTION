@@ -9,7 +9,8 @@ Description: R package to detect character encoding
 License: MPL
 URL: https://github.com/haven-jeon/Ruchardet/
 Depends:
-    Rcpp (>= 0.10.6)
+    Rcpp (>= 0.10.6),
+    testthat (>= 0.7.1)
 LinkingTo: Rcpp
 Collate:
     'RcppExports.R'
