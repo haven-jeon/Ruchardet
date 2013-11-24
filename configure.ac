@@ -18,9 +18,23 @@ AC_PROG_CC
 #else
 #AC_MSG_WARN([pkg-config not found, is uchardet installed?])
 
+
+: ${R_HOME=`R RHOME`}
+if test -z "${R_HOME}"; then
+  echo "could not determine R_HOME"
+  exit 1
+fi
+
+AC_LANG(C++)
+
+CC=`"${R_HOME}/bin/R" CMD config CC`
+CFLAGS=`"${R_HOME}/bin/R" CMD config CFLAGS`
+CPPFLAGS=`"${R_HOME}/bin/R" CMD config CPPFLAGS`
+
 UCD_CFLAGS='-Iuchardet-0.0.1/src'
 UCD_LIBS='-Luchardet-0.0.1/src -luchardet'
 UCD_A='libuchardet.a'
+
 
 
 
@@ -43,6 +57,7 @@ else
 fi
 
 # Now substitute these variables in src/Makevars.in to create src/Makevars
+
 AC_SUBST(UCD_A)
 AC_SUBST(UCD_CFLAGS)
 AC_SUBST(UCD_LIBS)
