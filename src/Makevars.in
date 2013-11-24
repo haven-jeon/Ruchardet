@@ -14,3 +14,5 @@ $(SHLIB): $(UCD_A)
 $(UCD_A):
 	(cd uchardet-0.0.1/src && \
 	($(MAKE)  CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS) $(CXXPICFLAGS) " AR="$(AR)" RANLIB="$(RANLIB)"))
+
+ 

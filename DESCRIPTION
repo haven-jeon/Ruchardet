@@ -14,3 +14,4 @@ Depends:
 LinkingTo: Rcpp
 Collate:
     'RcppExports.R'
+    'utils.R'

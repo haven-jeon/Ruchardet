@@ -1,2 +1,3 @@
 useDynLib(Ruchardet)
 export(detectEncoding)
+export(detectFileEncoding)

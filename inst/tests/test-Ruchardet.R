@@ -1,7 +1,17 @@
 context("test Rucharet")
 
-test_that("Hannanum test", {
-          expect_equal(detectEncoding("검색엔진 개발자 모임. 그룹 스터디 하자!"),"UTF-8")
+
+test_that("test detectEncoding", {
+          expect_true(file.exists(file.path(system.file("tests", package="Ruchardet"), "big5.txt")))
+          expect_true(file.exists(file.path(system.file("tests", package="Ruchardet"), "gb18030.txt")))
+          expect_true(file.exists(file.path(system.file("tests", package="Ruchardet"), "shift_jis.txt")))
+          expect_true(file.exists(file.path(system.file("tests", package="Ruchardet"), "utf8.txt")))
+
+          expect_equal(detectFileEncoding(file.path(system.file("tests", package="Ruchardet"), "big5.txt"),n=-1),      "Big5")
+          expect_equal(detectFileEncoding(file.path(system.file("tests", package="Ruchardet"), "gb18030.txt"),n=-1),   "gb18030")
+          expect_equal(detectFileEncoding(file.path(system.file("tests", package="Ruchardet"), "shift_jis.txt"),n=-1), "Shift_JIS")
+          expect_equal(detectFileEncoding(file.path(system.file("tests", package="Ruchardet"), "utf8.txt"),n=-1),      "UTF-8")
+
 })
 
 
