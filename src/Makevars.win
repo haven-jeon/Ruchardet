@@ -1,5 +1,5 @@
 PKG_CPPFLAGS = -Iuchardet-0.0.1/src
-PKG_LIBS = -Luchardet-0.0.1/src -luchardet $(shell "${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" -e "Rcpp:::LdFlags()")
+PKG_LIBS = -Luchardet-0.0.1/src -luchardet $(shell "${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" --vanilla -e "Rcpp:::LdFlags()")
 
 
 $(SHLIB): libuchardet.a
