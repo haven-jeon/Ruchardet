@@ -1,0 +1,29 @@
+Ruchardet
+=========
+
+An R port of http://code.google.com/p/uchardet/ library 
+
+### Install 
+
+```{r init, eval=FALSE}
+library(devtools)
+
+install_github('Ruchardet', 'haven-jeon')
+```
+
+
+### Example
+
+```{r example, }
+library(Ruchardet)
+
+nm <- '전희원입니다'
+benc <- detectEncoding(nm)
+benc
+nme <- iconv(nm, benc, "CP949")
+detectEncoding(c(nm, nme))
+
+#detection of unknown file encoding
+unknown <- file.path(system.file("tests",package="Ruchardet"),"shift_jis.txt")
+read.table(unknown, fileEncoding=detectFileEncoding(unknown))
+```
