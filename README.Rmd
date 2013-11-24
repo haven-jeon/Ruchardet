@@ -14,10 +14,10 @@ install_github('Ruchardet', 'haven-jeon')
 
 ### Example
 
-```{r example, }
-library(Ruchardet)
+```{r example}
+library(Ruchardet, quietly = TRUE)
 
-nm <- '전희원입니다'
+nm <- '안녕하세요! 고감자입니다'
 benc <- detectEncoding(nm)
 benc
 nme <- iconv(nm, benc, "CP949")

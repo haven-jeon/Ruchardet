@@ -18,17 +18,9 @@ install_github("Ruchardet", "haven-jeon")
 
 
 ```r
-library(Ruchardet)
-```
+library(Ruchardet, quietly = TRUE)
 
-```
-## Loading required package: Rcpp
-## Loading required package: testthat
-```
-
-```r
-
-nm <- "전희원입니다"
+nm <- "안녕하세요! 고감자입니다"
 benc <- detectEncoding(nm)
 benc
 ```
