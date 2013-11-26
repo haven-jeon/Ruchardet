@@ -1,0 +1,12 @@
+
+
+
+Version 0.0-1.1
+-------------------------------------------------------------------------
+Fixes -
+  bug fix detectFileEncoding when connection object is inputted
+
+
+Version 0.0-1
+-------------------------------------------------------------------------
+PACKAGE GENESIS.

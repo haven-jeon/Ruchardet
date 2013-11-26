@@ -8,7 +8,7 @@
 #' detectFileEncoding(big5encfile) 
 #' @export 
 detectFileEncoding <- function(file, n=-1, default=getOption("encoding")){
-  if (is.character(file) & file.exists(file)) {
+  if (is.character(file) && file.exists(file)) {
     con <- file(file, "r")
     on.exit(close(con))
   }else if(inherits(file, "connection")){
