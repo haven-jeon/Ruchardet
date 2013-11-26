@@ -11,6 +11,10 @@ test_that("test detectEncoding", {
           expect_equal(detectFileEncoding(file.path(system.file("tests", package="Ruchardet"), "gb18030.txt"),n=-1),   "gb18030")
           expect_equal(detectFileEncoding(file.path(system.file("tests", package="Ruchardet"), "shift_jis.txt"),n=-1), "Shift_JIS")
           expect_equal(detectFileEncoding(file.path(system.file("tests", package="Ruchardet"), "utf8.txt"),n=-1),      "UTF-8")
+          
+          fo <- file(file.path(system.file("tests", package="Ruchardet"), "shift_jis.txt"), 'r')
+          expect_equal(detectFileEncoding(fo), "Shift_JIS")
+          close(fo)
 
 })
 
