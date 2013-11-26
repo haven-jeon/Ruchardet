@@ -3,8 +3,13 @@
 
 Version 0.0-1.1
 -------------------------------------------------------------------------
+
+Additions -
+  1. now detectFileEncoding can accept any file or url connections. 
+
 Fixes -
-  bug fix detectFileEncoding when connection object is inputted
+  1. bug fix detectFileEncoding when connection object is inputted
+
 
 
 Version 0.0-1

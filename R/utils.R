@@ -8,15 +8,18 @@
 #' detectFileEncoding(big5encfile) 
 #' @export 
 detectFileEncoding <- function(file, n=-1, default=getOption("encoding")){
-  if (is.character(file) && file.exists(file)) {
-    con <- file(file, "r")
-    on.exit(close(con))
-  }else if(inherits(file, "connection")){
-    con <- file
-  }else{
-    stop("Argument 'file' must be a character string of file path or connection.")
+
+  if (is.character(file)) {
+      file <- file(file, "rt")
+      on.exit(close(file))
   }
-  encs <- detectEncoding(paste0(readLines(con, warn=FALSE, n=n),collapse=""))
+  if (!inherits(file, "connection")) 
+      stop("'file' must be a character string or connection")
+  if (!isOpen(file, "rt")) {
+      open(file, "rt")
+      on.exit(close(file))
+  }
+  encs <- detectEncoding(paste0(readLines(file, warn=FALSE, n=n),collapse=""))
   if(encs == ''){
     warning("can't expect encoding, will return 'default' encoding")
     encs <- default
