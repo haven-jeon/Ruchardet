@@ -1,15 +1,17 @@
 Package: Ruchardet
 Type: Package
-Title: Ruchardet
+Title: R package to detect character encoding
 Version: 0.0-2
 Date: 2013-03-08
 Author: Heewon Jeon
 Maintainer: Heewon Jeon <madjakarta@gmail.com>
-Description: R package to detect character encoding
+Description: R port of 'universalchardet', that is the encoding detector library of Mozilla.
 License: MPL
 URL: https://github.com/haven-jeon/Ruchardet/
-Depends: R (>= 3.0.2)
-Suggests: testthat (>= 0.7.1)
+Depends:
+    R (>= 3.0.2)
+Suggests:
+    testthat (>= 0.7.1)
 LinkingTo: Rcpp (>= 0.10.6)
 Collate:
     'RcppExports.R'
