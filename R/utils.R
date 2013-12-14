@@ -6,6 +6,10 @@
 #' @examples 
 #' big5encfile <- file.path(system.file(package="Ruchardet"),"tests","big5.txt") 
 #' detectFileEncoding(big5encfile) 
+#' \dontrun{
+#' detectFileEncoding("http://www.ppomppu.co.kr/")
+#' detectFileEncoding("http://freesearch.pe.kr")
+#' }
 #' @export 
 detectFileEncoding <- function(file, n=-1, default=getOption("encoding")){
 

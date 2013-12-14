@@ -5,7 +5,8 @@ Version: 0.0-2
 Date: 2013-03-08
 Author: Heewon Jeon
 Maintainer: Heewon Jeon <madjakarta@gmail.com>
-Description: R port of 'universalchardet', that is the encoding detector library of Mozilla.
+Description: R port of 'universalchardet', that is the encoding detector
+    library of Mozilla.
 License: MPL
 URL: https://github.com/haven-jeon/Ruchardet/
 Depends:
