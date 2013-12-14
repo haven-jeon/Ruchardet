@@ -5,6 +5,8 @@ UCD_LIBS     = @UCD_LIBS@
 RCPP_LDFLAGS = @RCPP_LDFLAGS@
 UCD_A        = @UCD_A@
 
+@SET_MAKE@
+
 # combine with standard arguments for R
 PKG_CPPFLAGS = $(UCD_CFLAGS) 
 PKG_LIBS = $(UCD_LIBS) $(RCPP_LDFLAGS)

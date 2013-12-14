@@ -4,7 +4,7 @@ AC_INIT([Ruchardet], 0.0-1)
 
 # Checks for common programs using default macros
 AC_PROG_CC
-
+AC_PROG_CPP
 
 #AC_CHECK_LIB([uchardet], [encoding_detector])
 #AC_CHECK_HEADER([uchardet/uchardet.h])
@@ -36,7 +36,7 @@ UCD_LIBS='-Luchardet-0.0.1/src -luchardet'
 UCD_A='libuchardet.a'
 
 
-
+AC_PROG_MAKE_SET
 
 ## Use Rscript to query Rcpp for compiler and linker flags
 ##
@@ -63,6 +63,7 @@ AC_SUBST(UCD_CFLAGS)
 AC_SUBST(UCD_LIBS)
 AC_SUBST(RCPP_CXXFLAGS)
 AC_SUBST(RCPP_LDFLAGS)
+AC_SUBST(SET_MAKE)
 
 AC_OUTPUT(src/Makevars)
 
