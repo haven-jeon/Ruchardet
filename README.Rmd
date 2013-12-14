@@ -26,4 +26,10 @@ detectEncoding(c(nm, nme))
 #detection of unknown file encoding
 unknown <- file.path(system.file("tests",package="Ruchardet"),"shift_jis.txt")
 read.table(unknown, fileEncoding=detectFileEncoding(unknown))
+
+
+#URL encoding detection 
+detectFileEncoding('http://www.ppomppu.co.kr/')
+detectFileEncoding('http://freesearch.pe.kr')
+
 ```

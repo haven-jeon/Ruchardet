@@ -50,3 +50,22 @@ read.table(unknown, fileEncoding = detectFileEncoding(unknown))
 ## 1 日本語日本語日本語日本語日本語日本語日本語日本語日本語日本語日本語日本語日本語日本語日本語日本語日本語日本語日本語
 ```
 
+```r
+
+
+# URL encoding detection
+detectFileEncoding("http://www.ppomppu.co.kr/")
+```
+
+```
+## [1] "EUC-KR"
+```
+
+```r
+detectFileEncoding("http://freesearch.pe.kr")
+```
+
+```
+## [1] "UTF-8"
+```
+
