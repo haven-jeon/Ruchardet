@@ -8,7 +8,7 @@
   \item{str}{input string}
 }
 \value{
-  string of encoding
+  encoding name
 }
 \description{
   detect encoding of input string
