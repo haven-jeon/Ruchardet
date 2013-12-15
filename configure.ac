@@ -37,6 +37,7 @@ UCD_A='libuchardet.a'
 
 
 AC_PROG_MAKE_SET
+AC_PROG_RANLIB
 
 ## Use Rscript to query Rcpp for compiler and linker flags
 ##
