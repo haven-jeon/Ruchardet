@@ -1,3 +1,4 @@
 export(detectEncoding)
 export(detectFileEncoding)
 useDynLib(Ruchardet)
+importFrom(Rcpp, evalCpp)
