@@ -6,5 +6,7 @@ $(SHLIB): libuchardet.a
 
 
 libuchardet.a:
-	(cd uchardet-0.0.5/src && \
+	(cd uchardet-0.0.5/ && \
+	(cmake . ) && \
+	(cd src ) && \
 	($(MAKE)  CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS) $(CXXPICFLAGS)" AR="$(AR)" RANLIB="$(RANLIB)"))
