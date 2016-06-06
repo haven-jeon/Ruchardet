@@ -9,14 +9,10 @@ using namespace Rcpp;
 CharacterVector detectEncoding(StringVector str);
 RcppExport SEXP Ruchardet_detectEncoding(SEXP strSEXP) {
 BEGIN_RCPP
-    SEXP __sexp_result;
-    {
-        Rcpp::RNGScope __rngScope;
-        Rcpp::traits::input_parameter< StringVector >::type str(strSEXP );
-        CharacterVector __result = detectEncoding(str);
-        PROTECT(__sexp_result = Rcpp::wrap(__result));
-    }
-    UNPROTECT(1);
-    return __sexp_result;
+    Rcpp::RObject __result;
+    Rcpp::RNGScope __rngScope;
+    Rcpp::traits::input_parameter< StringVector >::type str(strSEXP);
+    __result = Rcpp::wrap(detectEncoding(str));
+    return __result;
 END_RCPP
 }
