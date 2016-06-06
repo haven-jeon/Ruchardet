@@ -1,6 +1,6 @@
 
 # The version set here will propagate to other files from here
-AC_INIT([Ruchardet], 0.0-1)
+AC_INIT([Ruchardet], 0.0-5)
 
 # Checks for common programs using default macros
 AC_PROG_CC
@@ -31,8 +31,8 @@ CC=`"${R_HOME}/bin/R" CMD config CC`
 CFLAGS=`"${R_HOME}/bin/R" CMD config CFLAGS`
 CPPFLAGS=`"${R_HOME}/bin/R" CMD config CPPFLAGS`
 
-UCD_CFLAGS='-Iuchardet-0.0.1/src'
-UCD_LIBS='-Luchardet-0.0.1/src -luchardet'
+UCD_CFLAGS='-Iuchardet-0.0.5/src'
+UCD_LIBS='-Luchardet-0.0.5/src -luchardet'
 UCD_A='libuchardet.a'
 
 
